@@ -15,7 +15,6 @@ class CategoriesScreen extends StatelessWidget {
         dummyMeals
             .where((meal) => meal.categories.contains(category.id))
             .toList();
-
     Navigator.of(context).push(
       MaterialPageRoute(
         builder:
