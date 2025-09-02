@@ -1,11 +1,12 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app_meals/data/dummy_data.dart';
 import 'package:flutter_app_meals/models/categorty.dart';
 import 'package:flutter_app_meals/models/meal.dart';
+import 'package:flutter_app_meals/providers/meal_provider.dart';
 import 'package:flutter_app_meals/screens/meals.dart';
 import 'package:flutter_app_meals/widgets/dategory_grid_item.dart';
 
-class CategoriesScreen extends StatelessWidget {
+class CategoriesScreen extends ConsumerWidget {
   const CategoriesScreen({super.key, required this.availableMeals});
 
   final List<Meal> availableMeals;
@@ -24,7 +25,8 @@ class CategoriesScreen extends StatelessWidget {
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final availableCategories = ref.watch(availableCategoriesProvider);
     return GridView(
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
