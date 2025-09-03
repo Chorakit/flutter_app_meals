@@ -86,7 +86,6 @@ class _CategoriesScreenState extends ConsumerState<CategoriesScreen>
                 curve: Curves.easeInOut,
               ),
             ),
-
             child: child,
           ),
     );
