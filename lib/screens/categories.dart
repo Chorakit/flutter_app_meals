@@ -4,7 +4,7 @@ import 'package:flutter_app_meals/models/categorty.dart';
 import 'package:flutter_app_meals/models/meal.dart';
 import 'package:flutter_app_meals/providers/meal_provider.dart';
 import 'package:flutter_app_meals/screens/meals.dart';
-import 'package:flutter_app_meals/widgets/dategory_grid_item.dart';
+import 'package:flutter_app_meals/widgets/category_grid_item.dart';
 
 class CategoriesScreen extends ConsumerStatefulWidget {
   const CategoriesScreen({super.key, required this.availableMeals});
